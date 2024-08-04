@@ -1,0 +1,51 @@
+[
+  {
+    "objectID": "about.html",
+    "href": "about.html",
+    "title": "About",
+    "section": "",
+    "text": "About this blog"
+  },
+  {
+    "objectID": "posts/blog.html",
+    "href": "posts/blog.html",
+    "title": "Olympic Evolution: Exploring Trends in National Dominance, Gender Representation, and Home Advantage",
+    "section": "",
+    "text": "Blog\nName: Nancy Sui\nDate: 8/1/2024\nTitle: Olympic Evolution: Exploring Trends in National Dominance, Gender Representation, and Home Advantage\nClass: UCLA DH 140"
+  },
+  {
+    "objectID": "posts/blog.html#introduction",
+    "href": "posts/blog.html#introduction",
+    "title": "Olympic Evolution: Exploring Trends in National Dominance, Gender Representation, and Home Advantage",
+    "section": "Introduction",
+    "text": "Introduction\nThe 2024 Paris Olympics, the most anticipated global event of this summer, has brought a renewed focus on the dynamics that shape the world of sports. This project examines the evolution of women’s representation in the Olympics, highlighting the progress made toward gender equality. Additionally, the concept of “home advantage” is analyzed to determine its impact on medal counts for host countries. Finally, this study analyzes the dominance of countries in the Olympics and the sports they excel in, providing insights into the factors contributing to success.\n\nDataset Description\n\n\n\nDataset Name\nDescription\nLink to Resources\n\n\n\n\n120 Years of Olympic History: Athletes and Results\nThis dataset contains detailed information about athletes and their results in the Olympics from 1896 to 2016. It includes variables such as ID, Name, Sex, Age, Height, Weight, Team, NOC, Games, Year, Season, City, Sport, Event, and Medal.\nKaggle: 120 Years of Olympic History\n\n\nCountry Wise GDP Data\nThis dataset provides information on the Gross Domestic Product (GDP) of various countries. It includes variables such as Country, Year, and GDP in USD.\nKaggle: Country GDP Data\n\n\n\n\n\nResearch Questions\n\nHow has the representation of women in the Olympics changed over the decades?\nWhat is the impact of home advantage on Olympic medal counts?\nWhich countries have historically dominated which sports in Olympics?\n\n\n\nMotivation\nThe 2024 Paris Olympics, capturing global attention this summer, provides a compelling backdrop for examining the intersection of sports and digital humanities. This project aims to explore the evolving representation of women in sports through digital analysis and assess the impact of home advantage on medal counts. By leveraging digital tools and computational techniques, this research not only highlights the dynamic nature of the Games but also demonstrates how digital humanities can enhance our understanding of socio-economic and cultural phenomena in global sports.\n\n\nMethods\n\nData Preprocessing\n\nImport Data\nCleaning\nMerging\n\nData Analysis\n\nBasic statistical analysis\n\nData Visualization\n\nInsights\nComparsion"
+  },
+  {
+    "objectID": "posts/blog.html#data-preprocessing",
+    "href": "posts/blog.html#data-preprocessing",
+    "title": "Olympic Evolution: Exploring Trends in National Dominance, Gender Representation, and Home Advantage",
+    "section": "Data Preprocessing",
+    "text": "Data Preprocessing\n\nImport All Necessary Library\n\n\nimport requests\nimport matplotlib.pyplot as plt\nimport pandas as pd\nimport seaborn as sns\nimport numpy as np\nimport plotly.express as px\n\n\n%matplotlib inline  \n\n\n\ndata.describe().T\n\n\n\n\n\n\n\n\ncount\nmean\nstd\nmin\n25%\n50%\n75%\nmax\n\n\n\n\nID\n271116.0\n68248.954396\n39022.286345\n1.0\n34643.0\n68205.0\n102097.25\n135571.0\n\n\nAge\n261642.0\n25.556898\n6.393561\n10.0\n21.0\n24.0\n28.00\n97.0\n\n\nHeight\n210945.0\n175.338970\n10.518462\n127.0\n168.0\n175.0\n183.00\n226.0\n\n\nWeight\n208241.0\n70.702393\n14.348020\n25.0\n60.0\n70.0\n79.00\n214.0\n\n\nYear\n271116.0\n1978.378480\n29.877632\n1896.0\n1960.0\n1988.0\n2002.00\n2016.0\n\n\n\n\n\n\n\n\n\ndata.isnull().sum()/data.shape[0]\n\nID        0.000000\nName      0.000000\nSex       0.000000\nAge       0.034944\nHeight    0.221938\nWeight    0.231912\nTeam      0.000000\nNOC       0.000000\nGames     0.000000\nYear      0.000000\nSeason    0.000000\nCity      0.000000\nSport     0.000000\nEvent     0.000000\nMedal     0.853262\ndtype: float64\n\n\nMedal is larger than 0.5, we will discuss it later.\n\nnoc_data= pd.read_csv(\"~/Desktop/noc_regions.csv\", encoding='latin1')\n\nnoc_data.drop('notes', axis = 1 , inplace = True)\nnoc_data.rename(columns = {'region':'Country'}, inplace = True)\nnoc_data.head()\n\n\n\n\n\n\n\n\nNOC\nCountry\n\n\n\n\n0\nAFG\nAfghanistan\n\n\n1\nAHO\nCuracao\n\n\n2\nALB\nAlbania\n\n\n3\nALG\nAlgeria\n\n\n4\nAND\nAndorra\n\n\n\n\n\n\n\n\n\nData Cleaning\n\nprint(data.isnull().sum())\n\nID             0\nName           0\nSex            0\nAge         9474\nHeight     60171\nWeight     62875\nTeam           0\nNOC            0\nGames          0\nYear           0\nSeason         0\nCity           0\nSport          0\nEvent          0\nMedal     231333\ndtype: int64\n\n\nThe Age, Height, and Weight columns contain a significant number of missing values. The Medal column also has missing values, which is expected as it is only absent for participants who did not win a medal.\n\n# Now replace the missing values of Medal with 'NA'\ndata['Medal'].fillna('NA', inplace = True)\nprint(data.isnull().sum()) # check it again \n\nID            0\nName          0\nSex           0\nAge        9474\nHeight    60171\nWeight    62875\nTeam          0\nNOC           0\nGames         0\nYear          0\nSeason        0\nCity          0\nSport         0\nEvent         0\nMedal         0\ndtype: int64\n\n\n\n\nMerge Data\n\n\ndf=data.merge(noc_data,left_on='NOC', right_on='NOC',how='left')\ndf.head()\n\n\n\n\n\n\n\n\nID\nName\nSex\nAge\nHeight\nWeight\nTeam\nNOC\nGames\nYear\nSeason\nCity\nSport\nEvent\nMedal\nCountry\n\n\n\n\n0\n1\nA Dijiang\nM\n24.0\n180.0\n80.0\nChina\nCHN\n1992 Summer\n1992\nSummer\nBarcelona\nBasketball\nBasketball Men's Basketball\nNA\nChina\n\n\n1\n2\nA Lamusi\nM\n23.0\n170.0\n60.0\nChina\nCHN\n2012 Summer\n2012\nSummer\nLondon\nJudo\nJudo Men's Extra-Lightweight\nNA\nChina\n\n\n2\n3\nGunnar Nielsen Aaby\nM\n24.0\nNaN\nNaN\nDenmark\nDEN\n1920 Summer\n1920\nSummer\nAntwerpen\nFootball\nFootball Men's Football\nNA\nDenmark\n\n\n3\n4\nEdgar Lindenau Aabye\nM\n34.0\nNaN\nNaN\nDenmark/Sweden\nDEN\n1900 Summer\n1900\nSummer\nParis\nTug-Of-War\nTug-Of-War Men's Tug-Of-War\nGold\nDenmark\n\n\n4\n5\nChristine Jacoba Aaftink\nF\n21.0\n185.0\n82.0\nNetherlands\nNED\n1988 Winter\n1988\nWinter\nCalgary\nSpeed Skating\nSpeed Skating Women's 500 metres\nNA\nNetherlands"
+  },
+  {
+    "objectID": "posts/post-with-code/index.html",
+    "href": "posts/post-with-code/index.html",
+    "title": "Post With Code",
+    "section": "",
+    "text": "This is a post with executable code."
+  },
+  {
+    "objectID": "posts/welcome/index.html",
+    "href": "posts/welcome/index.html",
+    "title": "Welcome To My Blog",
+    "section": "",
+    "text": "This is the first post in a Quarto blog. Welcome!\n\nSince this post doesn’t specify an explicit image, the first image in the post will be used in the listing page of posts."
+  },
+  {
+    "objectID": "index.html",
+    "href": "index.html",
+    "title": "blog",
+    "section": "",
+    "text": "Olympic Evolution: Exploring Trends in National Dominance, Gender Representation, and Home Advantage\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\nPost With Code\n\n\n\n\n\n\nnews\n\n\ncode\n\n\nanalysis\n\n\n\n\n\n\n\n\n\nAug 4, 2024\n\n\nHarlow Malloc\n\n\n\n\n\n\n\n\n\n\n\n\nWelcome To My Blog\n\n\n\n\n\n\nnews\n\n\n\n\n\n\n\n\n\nAug 1, 2024\n\n\nTristan O’Malley\n\n\n\n\n\n\nNo matching items"
+  }
+]

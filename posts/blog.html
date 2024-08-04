@@ -1,0 +1,1531 @@
+<!DOCTYPE html>
+<html xmlns="http://www.w3.org/1999/xhtml" lang="en" xml:lang="en"><head>
+
+<meta charset="utf-8">
+<meta name="generator" content="quarto-1.5.56">
+
+<meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=yes">
+
+
+<title>blog – blog</title>
+<style>
+code{white-space: pre-wrap;}
+span.smallcaps{font-variant: small-caps;}
+div.columns{display: flex; gap: min(4vw, 1.5em);}
+div.column{flex: auto; overflow-x: auto;}
+div.hanging-indent{margin-left: 1.5em; text-indent: -1.5em;}
+ul.task-list{list-style: none;}
+ul.task-list li input[type="checkbox"] {
+  width: 0.8em;
+  margin: 0 0.8em 0.2em -1em; /* quarto-specific, see https://github.com/quarto-dev/quarto-cli/issues/4556 */ 
+  vertical-align: middle;
+}
+/* CSS for syntax highlighting */
+pre > code.sourceCode { white-space: pre; position: relative; }
+pre > code.sourceCode > span { line-height: 1.25; }
+pre > code.sourceCode > span:empty { height: 1.2em; }
+.sourceCode { overflow: visible; }
+code.sourceCode > span { color: inherit; text-decoration: inherit; }
+div.sourceCode { margin: 1em 0; }
+pre.sourceCode { margin: 0; }
+@media screen {
+div.sourceCode { overflow: auto; }
+}
+@media print {
+pre > code.sourceCode { white-space: pre-wrap; }
+pre > code.sourceCode > span { display: inline-block; text-indent: -5em; padding-left: 5em; }
+}
+pre.numberSource code
+  { counter-reset: source-line 0; }
+pre.numberSource code > span
+  { position: relative; left: -4em; counter-increment: source-line; }
+pre.numberSource code > span > a:first-child::before
+  { content: counter(source-line);
+    position: relative; left: -1em; text-align: right; vertical-align: baseline;
+    border: none; display: inline-block;
+    -webkit-touch-callout: none; -webkit-user-select: none;
+    -khtml-user-select: none; -moz-user-select: none;
+    -ms-user-select: none; user-select: none;
+    padding: 0 4px; width: 4em;
+  }
+pre.numberSource { margin-left: 3em;  padding-left: 4px; }
+div.sourceCode
+  {   }
+@media screen {
+pre > code.sourceCode > span > a:first-child::before { text-decoration: underline; }
+}
+</style>
+
+
+<script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.5.1/jquery.min.js" integrity="sha512-bLT0Qm9VnAYZDflyKcBaQ2gg0hSYNQrJ8RilYldYQ1FxQYoCLtUjuuRuZo+fjqhx/qtq/1itJ0C2ejDxltZVFg==" crossorigin="anonymous"></script><script src="../site_libs/quarto-nav/quarto-nav.js"></script>
+<script src="../site_libs/quarto-nav/headroom.min.js"></script>
+<script src="../site_libs/clipboard/clipboard.min.js"></script>
+<script src="../site_libs/quarto-search/autocomplete.umd.js"></script>
+<script src="../site_libs/quarto-search/fuse.min.js"></script>
+<script src="../site_libs/quarto-search/quarto-search.js"></script>
+<meta name="quarto:offset" content="../">
+<script src="../site_libs/quarto-html/quarto.js"></script>
+<script src="../site_libs/quarto-html/popper.min.js"></script>
+<script src="../site_libs/quarto-html/tippy.umd.min.js"></script>
+<script src="../site_libs/quarto-html/anchor.min.js"></script>
+<link href="../site_libs/quarto-html/tippy.css" rel="stylesheet">
+<link href="../site_libs/quarto-html/quarto-syntax-highlighting.css" rel="stylesheet" id="quarto-text-highlighting-styles">
+<script src="../site_libs/bootstrap/bootstrap.min.js"></script>
+<link href="../site_libs/bootstrap/bootstrap-icons.css" rel="stylesheet">
+<link href="../site_libs/bootstrap/bootstrap.min.css" rel="stylesheet" id="quarto-bootstrap" data-mode="light">
+<script id="quarto-search-options" type="application/json">{
+  "location": "navbar",
+  "copy-button": false,
+  "collapse-after": 3,
+  "panel-placement": "end",
+  "type": "overlay",
+  "limit": 50,
+  "keyboard-shortcut": [
+    "f",
+    "/",
+    "s"
+  ],
+  "show-item-context": false,
+  "language": {
+    "search-no-results-text": "No results",
+    "search-matching-documents-text": "matching documents",
+    "search-copy-link-title": "Copy link to search",
+    "search-hide-matches-text": "Hide additional matches",
+    "search-more-match-text": "more match in this document",
+    "search-more-matches-text": "more matches in this document",
+    "search-clear-button-title": "Clear",
+    "search-text-placeholder": "",
+    "search-detached-cancel-button-title": "Cancel",
+    "search-submit-button-title": "Submit",
+    "search-label": "Search"
+  }
+}</script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/require.js/2.3.6/require.min.js" integrity="sha512-c3Nl8+7g4LMSTdrm621y7kf9v3SDPnhxLNhcjFJbKECVnmZHTdo+IRO05sNLTH/D3vA6u1X32ehoLC7WFVdheg==" crossorigin="anonymous"></script>
+
+<script type="application/javascript">define('jquery', [],function() {return window.jQuery;})</script>
+
+
+<link rel="stylesheet" href="../styles.css">
+</head>
+
+<body class="nav-fixed fullcontent">
+
+<div id="quarto-search-results"></div>
+  <header id="quarto-header" class="headroom fixed-top quarto-banner">
+    <nav class="navbar navbar-expand-lg " data-bs-theme="dark">
+      <div class="navbar-container container-fluid">
+      <div class="navbar-brand-container mx-auto">
+    <a class="navbar-brand" href="../index.html">
+    <span class="navbar-title">blog</span>
+    </a>
+  </div>
+            <div id="quarto-search" class="" title="Search"></div>
+          <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarCollapse" aria-controls="navbarCollapse" role="menu" aria-expanded="false" aria-label="Toggle navigation" onclick="if (window.quartoToggleHeadroom) { window.quartoToggleHeadroom(); }">
+  <span class="navbar-toggler-icon"></span>
+</button>
+          <div class="collapse navbar-collapse" id="navbarCollapse">
+            <ul class="navbar-nav navbar-nav-scroll ms-auto">
+  <li class="nav-item">
+    <a class="nav-link" href="../about.html"> 
+<span class="menu-text">About</span></a>
+  </li>  
+  <li class="nav-item compact">
+    <a class="nav-link" href="https://github.com/"> <i class="bi bi-github" role="img">
+</i> 
+<span class="menu-text"></span></a>
+  </li>  
+  <li class="nav-item compact">
+    <a class="nav-link" href="https://twitter.com"> <i class="bi bi-twitter" role="img">
+</i> 
+<span class="menu-text"></span></a>
+  </li>  
+</ul>
+          </div> <!-- /navcollapse -->
+            <div class="quarto-navbar-tools">
+</div>
+      </div> <!-- /container-fluid -->
+    </nav>
+</header>
+<!-- content -->
+<div id="quarto-content" class="quarto-container page-columns page-rows-contents page-layout-article page-navbar">
+<!-- sidebar -->
+<!-- margin-sidebar -->
+    
+<!-- main -->
+<main class="content quarto-banner-title-block" id="quarto-document-content">
+
+
+
+
+<p>Blog</p>
+<p>Name: Nancy Sui</p>
+<p>Date: 8/1/2024</p>
+<p>Title: Olympic Evolution: Exploring Trends in National Dominance, Gender Representation, and Home Advantage</p>
+<p>Class: UCLA DH 140</p>
+<section id="olympic-evolution-exploring-trends-in-national-dominance-gender-representation-and-home-advantage" class="level1">
+<h1>Olympic Evolution: Exploring Trends in National Dominance, Gender Representation, and Home Advantage</h1>
+<div class="quarto-figure quarto-figure-center">
+<figure class="figure">
+<p><img src="blog_files/figure-html/35565d5e-c7c2-4cb9-b0f6-3659204b6da7-1-ad0bb674-c7fd-42a6-9dc7-50f47b73b5c2.png" class="img-fluid figure-img"></p>
+<figcaption>Screenshot 2024-08-03 at 4.00.09 PM.png</figcaption>
+</figure>
+</div>
+<p>Photo Credit: NBCUniversal https://www.nbcuniversal.com/article/more-150-commentators-join-nbcuniversals-coverage-olympic-games-paris-2024</p>
+<section id="introduction" class="level2">
+<h2 class="anchored" data-anchor-id="introduction">Introduction</h2>
+<p>The 2024 Paris Olympics, the most anticipated global event of this summer, has brought a renewed focus on the dynamics that shape the world of sports. This project examines the evolution of women’s representation in the Olympics, highlighting the progress made toward gender equality. Additionally, the concept of “home advantage” is analyzed to determine its impact on medal counts for host countries. Finally, this study analyzes the dominance of countries in the Olympics and the sports they excel in, providing insights into the factors contributing to success.</p>
+<section id="dataset-description" class="level3">
+<h3 class="anchored" data-anchor-id="dataset-description">Dataset Description</h3>
+<table class="caption-top table">
+<thead>
+<tr class="header">
+<th>Dataset Name</th>
+<th>Description</th>
+<th>Link to Resources</th>
+</tr>
+</thead>
+<tbody>
+<tr class="odd">
+<td>120 Years of Olympic History: Athletes and Results</td>
+<td>This dataset contains detailed information about athletes and their results in the Olympics from 1896 to 2016. It includes variables such as ID, Name, Sex, Age, Height, Weight, Team, NOC, Games, Year, Season, City, Sport, Event, and Medal.</td>
+<td><a href="https://www.kaggle.com/heesoo37/120-years-of-olympic-history-athletes-and-results">Kaggle: 120 Years of Olympic History</a></td>
+</tr>
+<tr class="even">
+<td>Country Wise GDP Data</td>
+<td>This dataset provides information on the Gross Domestic Product (GDP) of various countries. It includes variables such as Country, Year, and GDP in USD.</td>
+<td><a href="https://www.kaggle.com/datasets/chadalee/country-wise-gdp-data">Kaggle: Country GDP Data</a></td>
+</tr>
+</tbody>
+</table>
+</section>
+<section id="research-questions" class="level3">
+<h3 class="anchored" data-anchor-id="research-questions">Research Questions</h3>
+<ol type="1">
+<li>How has the representation of women in the Olympics changed over the decades?</li>
+<li>What is the impact of home advantage on Olympic medal counts?</li>
+<li>Which countries have historically dominated which sports in Olympics?</li>
+</ol>
+</section>
+<section id="motivation" class="level3">
+<h3 class="anchored" data-anchor-id="motivation">Motivation</h3>
+<p>The 2024 Paris Olympics, capturing global attention this summer, provides a compelling backdrop for examining the intersection of sports and digital humanities. This project aims to explore the evolving representation of women in sports through digital analysis and assess the impact of home advantage on medal counts. By leveraging digital tools and computational techniques, this research not only highlights the dynamic nature of the Games but also demonstrates how digital humanities can enhance our understanding of socio-economic and cultural phenomena in global sports.</p>
+</section>
+<section id="methods" class="level3">
+<h3 class="anchored" data-anchor-id="methods">Methods</h3>
+<ul>
+<li>Data Preprocessing
+<ol type="1">
+<li>Import Data</li>
+<li>Cleaning</li>
+<li>Merging</li>
+</ol></li>
+<li>Data Analysis
+<ol type="1">
+<li>Basic statistical analysis</li>
+</ol></li>
+<li>Data Visualization
+<ol type="1">
+<li>Insights</li>
+<li>Comparsion</li>
+</ol></li>
+</ul>
+</section>
+</section>
+<section id="data-preprocessing" class="level2">
+<h2 class="anchored" data-anchor-id="data-preprocessing">Data Preprocessing</h2>
+<section id="import-all-necessary-library" class="level3">
+<h3 class="anchored" data-anchor-id="import-all-necessary-library">Import All Necessary Library</h3>
+<div id="c977d545-7226-46eb-bcbb-95822924b92c" class="cell" data-tags="[]" data-execution_count="144">
+<div class="sourceCode cell-code" id="cb1"><pre class="sourceCode python code-with-copy"><code class="sourceCode python"><span id="cb1-1"><a href="#cb1-1" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb1-2"><a href="#cb1-2" aria-hidden="true" tabindex="-1"></a><span class="im">import</span> requests</span>
+<span id="cb1-3"><a href="#cb1-3" aria-hidden="true" tabindex="-1"></a><span class="im">import</span> matplotlib.pyplot <span class="im">as</span> plt</span>
+<span id="cb1-4"><a href="#cb1-4" aria-hidden="true" tabindex="-1"></a><span class="im">import</span> pandas <span class="im">as</span> pd</span>
+<span id="cb1-5"><a href="#cb1-5" aria-hidden="true" tabindex="-1"></a><span class="im">import</span> seaborn <span class="im">as</span> sns</span>
+<span id="cb1-6"><a href="#cb1-6" aria-hidden="true" tabindex="-1"></a><span class="im">import</span> numpy <span class="im">as</span> np</span>
+<span id="cb1-7"><a href="#cb1-7" aria-hidden="true" tabindex="-1"></a><span class="im">import</span> plotly.express <span class="im">as</span> px</span>
+<span id="cb1-8"><a href="#cb1-8" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb1-9"><a href="#cb1-9" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb1-10"><a href="#cb1-10" aria-hidden="true" tabindex="-1"></a><span class="op">%</span>matplotlib inline  </span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+</div>
+<div id="999f9dd6-4d8b-4f10-94fa-6e1e8e7132c2" class="cell" data-tags="[]" data-execution_count="148">
+<div class="sourceCode cell-code" id="cb2"><pre class="sourceCode python code-with-copy"><code class="sourceCode python"><span id="cb2-1"><a href="#cb2-1" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb2-2"><a href="#cb2-2" aria-hidden="true" tabindex="-1"></a>data.describe().T</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<div class="cell-output cell-output-display" data-execution_count="148">
+<div>
+
+
+<table class="dataframe caption-top table table-sm table-striped small" data-quarto-postprocess="true" data-border="1">
+<thead>
+<tr class="header">
+<th data-quarto-table-cell-role="th"></th>
+<th data-quarto-table-cell-role="th">count</th>
+<th data-quarto-table-cell-role="th">mean</th>
+<th data-quarto-table-cell-role="th">std</th>
+<th data-quarto-table-cell-role="th">min</th>
+<th data-quarto-table-cell-role="th">25%</th>
+<th data-quarto-table-cell-role="th">50%</th>
+<th data-quarto-table-cell-role="th">75%</th>
+<th data-quarto-table-cell-role="th">max</th>
+</tr>
+</thead>
+<tbody>
+<tr class="odd">
+<td data-quarto-table-cell-role="th">ID</td>
+<td>271116.0</td>
+<td>68248.954396</td>
+<td>39022.286345</td>
+<td>1.0</td>
+<td>34643.0</td>
+<td>68205.0</td>
+<td>102097.25</td>
+<td>135571.0</td>
+</tr>
+<tr class="even">
+<td data-quarto-table-cell-role="th">Age</td>
+<td>261642.0</td>
+<td>25.556898</td>
+<td>6.393561</td>
+<td>10.0</td>
+<td>21.0</td>
+<td>24.0</td>
+<td>28.00</td>
+<td>97.0</td>
+</tr>
+<tr class="odd">
+<td data-quarto-table-cell-role="th">Height</td>
+<td>210945.0</td>
+<td>175.338970</td>
+<td>10.518462</td>
+<td>127.0</td>
+<td>168.0</td>
+<td>175.0</td>
+<td>183.00</td>
+<td>226.0</td>
+</tr>
+<tr class="even">
+<td data-quarto-table-cell-role="th">Weight</td>
+<td>208241.0</td>
+<td>70.702393</td>
+<td>14.348020</td>
+<td>25.0</td>
+<td>60.0</td>
+<td>70.0</td>
+<td>79.00</td>
+<td>214.0</td>
+</tr>
+<tr class="odd">
+<td data-quarto-table-cell-role="th">Year</td>
+<td>271116.0</td>
+<td>1978.378480</td>
+<td>29.877632</td>
+<td>1896.0</td>
+<td>1960.0</td>
+<td>1988.0</td>
+<td>2002.00</td>
+<td>2016.0</td>
+</tr>
+</tbody>
+</table>
+
+</div>
+</div>
+</div>
+<div id="f222999f-0087-47b5-a914-b4be68a30cd4" class="cell" data-tags="[]" data-execution_count="149">
+<div class="sourceCode cell-code" id="cb3"><pre class="sourceCode python code-with-copy"><code class="sourceCode python"><span id="cb3-1"><a href="#cb3-1" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb3-2"><a href="#cb3-2" aria-hidden="true" tabindex="-1"></a>data.isnull().<span class="bu">sum</span>()<span class="op">/</span>data.shape[<span class="dv">0</span>]</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<div class="cell-output cell-output-display" data-execution_count="149">
+<pre><code>ID        0.000000
+Name      0.000000
+Sex       0.000000
+Age       0.034944
+Height    0.221938
+Weight    0.231912
+Team      0.000000
+NOC       0.000000
+Games     0.000000
+Year      0.000000
+Season    0.000000
+City      0.000000
+Sport     0.000000
+Event     0.000000
+Medal     0.853262
+dtype: float64</code></pre>
+</div>
+</div>
+<p>Medal is larger than 0.5, we will discuss it later.</p>
+<div id="b804d954-346d-4b12-b03f-ed8de2af5710" class="cell" data-tags="[]" data-execution_count="154">
+<div class="sourceCode cell-code" id="cb5"><pre class="sourceCode python code-with-copy"><code class="sourceCode python"><span id="cb5-1"><a href="#cb5-1" aria-hidden="true" tabindex="-1"></a>noc_data<span class="op">=</span> pd.read_csv(<span class="st">"~/Desktop/noc_regions.csv"</span>, encoding<span class="op">=</span><span class="st">'latin1'</span>)</span>
+<span id="cb5-2"><a href="#cb5-2" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb5-3"><a href="#cb5-3" aria-hidden="true" tabindex="-1"></a>noc_data.drop(<span class="st">'notes'</span>, axis <span class="op">=</span> <span class="dv">1</span> , inplace <span class="op">=</span> <span class="va">True</span>)</span>
+<span id="cb5-4"><a href="#cb5-4" aria-hidden="true" tabindex="-1"></a>noc_data.rename(columns <span class="op">=</span> {<span class="st">'region'</span>:<span class="st">'Country'</span>}, inplace <span class="op">=</span> <span class="va">True</span>)</span>
+<span id="cb5-5"><a href="#cb5-5" aria-hidden="true" tabindex="-1"></a>noc_data.head()</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<div class="cell-output cell-output-display" data-execution_count="154">
+<div>
+
+
+<table class="dataframe caption-top table table-sm table-striped small" data-quarto-postprocess="true" data-border="1">
+<thead>
+<tr class="header">
+<th data-quarto-table-cell-role="th"></th>
+<th data-quarto-table-cell-role="th">NOC</th>
+<th data-quarto-table-cell-role="th">Country</th>
+</tr>
+</thead>
+<tbody>
+<tr class="odd">
+<td data-quarto-table-cell-role="th">0</td>
+<td>AFG</td>
+<td>Afghanistan</td>
+</tr>
+<tr class="even">
+<td data-quarto-table-cell-role="th">1</td>
+<td>AHO</td>
+<td>Curacao</td>
+</tr>
+<tr class="odd">
+<td data-quarto-table-cell-role="th">2</td>
+<td>ALB</td>
+<td>Albania</td>
+</tr>
+<tr class="even">
+<td data-quarto-table-cell-role="th">3</td>
+<td>ALG</td>
+<td>Algeria</td>
+</tr>
+<tr class="odd">
+<td data-quarto-table-cell-role="th">4</td>
+<td>AND</td>
+<td>Andorra</td>
+</tr>
+</tbody>
+</table>
+
+</div>
+</div>
+</div>
+</section>
+<section id="data-cleaning" class="level3">
+<h3 class="anchored" data-anchor-id="data-cleaning">Data Cleaning</h3>
+<div id="4ceffb48-231d-4960-9551-9ae8ff7ed137" class="cell" data-tags="[]" data-execution_count="157">
+<div class="sourceCode cell-code" id="cb6"><pre class="sourceCode python code-with-copy"><code class="sourceCode python"><span id="cb6-1"><a href="#cb6-1" aria-hidden="true" tabindex="-1"></a><span class="bu">print</span>(data.isnull().<span class="bu">sum</span>())</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<div class="cell-output cell-output-stdout">
+<pre><code>ID             0
+Name           0
+Sex            0
+Age         9474
+Height     60171
+Weight     62875
+Team           0
+NOC            0
+Games          0
+Year           0
+Season         0
+City           0
+Sport          0
+Event          0
+Medal     231333
+dtype: int64</code></pre>
+</div>
+</div>
+<p>The Age, Height, and Weight columns contain a significant number of missing values. The Medal column also has missing values, which is expected as it is only absent for participants who did not win a medal.</p>
+<div id="0d3a782b-fcea-4895-93db-1ebb0418e327" class="cell" data-tags="[]" data-execution_count="160">
+<div class="sourceCode cell-code" id="cb8"><pre class="sourceCode python code-with-copy"><code class="sourceCode python"><span id="cb8-1"><a href="#cb8-1" aria-hidden="true" tabindex="-1"></a><span class="co"># Now replace the missing values of Medal with 'NA'</span></span>
+<span id="cb8-2"><a href="#cb8-2" aria-hidden="true" tabindex="-1"></a>data[<span class="st">'Medal'</span>].fillna(<span class="st">'NA'</span>, inplace <span class="op">=</span> <span class="va">True</span>)</span>
+<span id="cb8-3"><a href="#cb8-3" aria-hidden="true" tabindex="-1"></a><span class="bu">print</span>(data.isnull().<span class="bu">sum</span>()) <span class="co"># check it again </span></span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<div class="cell-output cell-output-stdout">
+<pre><code>ID            0
+Name          0
+Sex           0
+Age        9474
+Height    60171
+Weight    62875
+Team          0
+NOC           0
+Games         0
+Year          0
+Season        0
+City          0
+Sport         0
+Event         0
+Medal         0
+dtype: int64</code></pre>
+</div>
+</div>
+</section>
+<section id="merge-data" class="level3">
+<h3 class="anchored" data-anchor-id="merge-data">Merge Data</h3>
+<div id="4baacaa3-e52a-46d8-8c85-d302235f8039" class="cell" data-execution_count="163">
+<div class="sourceCode cell-code" id="cb10"><pre class="sourceCode python code-with-copy"><code class="sourceCode python"><span id="cb10-1"><a href="#cb10-1" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb10-2"><a href="#cb10-2" aria-hidden="true" tabindex="-1"></a>df<span class="op">=</span>data.merge(noc_data,left_on<span class="op">=</span><span class="st">'NOC'</span>, right_on<span class="op">=</span><span class="st">'NOC'</span>,how<span class="op">=</span><span class="st">'left'</span>)</span>
+<span id="cb10-3"><a href="#cb10-3" aria-hidden="true" tabindex="-1"></a>df.head()</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<div class="cell-output cell-output-display" data-execution_count="163">
+<div>
+
+
+<table class="dataframe caption-top table table-sm table-striped small" data-quarto-postprocess="true" data-border="1">
+<thead>
+<tr class="header">
+<th data-quarto-table-cell-role="th"></th>
+<th data-quarto-table-cell-role="th">ID</th>
+<th data-quarto-table-cell-role="th">Name</th>
+<th data-quarto-table-cell-role="th">Sex</th>
+<th data-quarto-table-cell-role="th">Age</th>
+<th data-quarto-table-cell-role="th">Height</th>
+<th data-quarto-table-cell-role="th">Weight</th>
+<th data-quarto-table-cell-role="th">Team</th>
+<th data-quarto-table-cell-role="th">NOC</th>
+<th data-quarto-table-cell-role="th">Games</th>
+<th data-quarto-table-cell-role="th">Year</th>
+<th data-quarto-table-cell-role="th">Season</th>
+<th data-quarto-table-cell-role="th">City</th>
+<th data-quarto-table-cell-role="th">Sport</th>
+<th data-quarto-table-cell-role="th">Event</th>
+<th data-quarto-table-cell-role="th">Medal</th>
+<th data-quarto-table-cell-role="th">Country</th>
+</tr>
+</thead>
+<tbody>
+<tr class="odd">
+<td data-quarto-table-cell-role="th">0</td>
+<td>1</td>
+<td>A Dijiang</td>
+<td>M</td>
+<td>24.0</td>
+<td>180.0</td>
+<td>80.0</td>
+<td>China</td>
+<td>CHN</td>
+<td>1992 Summer</td>
+<td>1992</td>
+<td>Summer</td>
+<td>Barcelona</td>
+<td>Basketball</td>
+<td>Basketball Men's Basketball</td>
+<td>NA</td>
+<td>China</td>
+</tr>
+<tr class="even">
+<td data-quarto-table-cell-role="th">1</td>
+<td>2</td>
+<td>A Lamusi</td>
+<td>M</td>
+<td>23.0</td>
+<td>170.0</td>
+<td>60.0</td>
+<td>China</td>
+<td>CHN</td>
+<td>2012 Summer</td>
+<td>2012</td>
+<td>Summer</td>
+<td>London</td>
+<td>Judo</td>
+<td>Judo Men's Extra-Lightweight</td>
+<td>NA</td>
+<td>China</td>
+</tr>
+<tr class="odd">
+<td data-quarto-table-cell-role="th">2</td>
+<td>3</td>
+<td>Gunnar Nielsen Aaby</td>
+<td>M</td>
+<td>24.0</td>
+<td>NaN</td>
+<td>NaN</td>
+<td>Denmark</td>
+<td>DEN</td>
+<td>1920 Summer</td>
+<td>1920</td>
+<td>Summer</td>
+<td>Antwerpen</td>
+<td>Football</td>
+<td>Football Men's Football</td>
+<td>NA</td>
+<td>Denmark</td>
+</tr>
+<tr class="even">
+<td data-quarto-table-cell-role="th">3</td>
+<td>4</td>
+<td>Edgar Lindenau Aabye</td>
+<td>M</td>
+<td>34.0</td>
+<td>NaN</td>
+<td>NaN</td>
+<td>Denmark/Sweden</td>
+<td>DEN</td>
+<td>1900 Summer</td>
+<td>1900</td>
+<td>Summer</td>
+<td>Paris</td>
+<td>Tug-Of-War</td>
+<td>Tug-Of-War Men's Tug-Of-War</td>
+<td>Gold</td>
+<td>Denmark</td>
+</tr>
+<tr class="odd">
+<td data-quarto-table-cell-role="th">4</td>
+<td>5</td>
+<td>Christine Jacoba Aaftink</td>
+<td>F</td>
+<td>21.0</td>
+<td>185.0</td>
+<td>82.0</td>
+<td>Netherlands</td>
+<td>NED</td>
+<td>1988 Winter</td>
+<td>1988</td>
+<td>Winter</td>
+<td>Calgary</td>
+<td>Speed Skating</td>
+<td>Speed Skating Women's 500 metres</td>
+<td>NA</td>
+<td>Netherlands</td>
+</tr>
+</tbody>
+</table>
+
+</div>
+</div>
+</div>
+</section>
+</section>
+</section>
+<section id="methods-1" class="level1">
+<h1>Methods</h1>
+<p>Create a bar plot using Seaborn to visualize how many women won medals each year in the Summer Olympics</p>
+<div id="f5aa9079-725f-4625-851c-429cddbfccb1" class="cell" data-tags="[]" data-execution_count="167">
+<div class="sourceCode cell-code" id="cb11"><pre class="sourceCode python code-with-copy"><code class="sourceCode python"><span id="cb11-1"><a href="#cb11-1" aria-hidden="true" tabindex="-1"></a><span class="co"># female participants in the Summer Olympics</span></span>
+<span id="cb11-2"><a href="#cb11-2" aria-hidden="true" tabindex="-1"></a>women_olympics <span class="op">=</span> df[(df[<span class="st">'Sex'</span>] <span class="op">==</span> <span class="st">'F'</span>) <span class="op">&amp;</span> (df[<span class="st">'Season'</span>] <span class="op">==</span> <span class="st">'Summer'</span>) <span class="op">&amp;</span> (df[<span class="st">'Medal'</span>].notnull())]</span>
+<span id="cb11-3"><a href="#cb11-3" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb11-4"><a href="#cb11-4" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb11-5"><a href="#cb11-5" aria-hidden="true" tabindex="-1"></a>plt.figure(figsize<span class="op">=</span>(<span class="dv">20</span>, <span class="dv">10</span>))</span>
+<span id="cb11-6"><a href="#cb11-6" aria-hidden="true" tabindex="-1"></a>sns.countplot(x<span class="op">=</span><span class="st">'Year'</span>, data<span class="op">=</span>women_olympics, palette<span class="op">=</span><span class="st">'coolwarm'</span>)</span>
+<span id="cb11-7"><a href="#cb11-7" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb11-8"><a href="#cb11-8" aria-hidden="true" tabindex="-1"></a><span class="co"># Add title </span></span>
+<span id="cb11-9"><a href="#cb11-9" aria-hidden="true" tabindex="-1"></a>plt.title(<span class="st">'Number of Women Winning Medals per Edition of the Summer Olympics'</span>)</span>
+<span id="cb11-10"><a href="#cb11-10" aria-hidden="true" tabindex="-1"></a>plt.xlabel(<span class="st">'Year'</span>)</span>
+<span id="cb11-11"><a href="#cb11-11" aria-hidden="true" tabindex="-1"></a>plt.ylabel(<span class="st">'Number of Medals'</span>)</span>
+<span id="cb11-12"><a href="#cb11-12" aria-hidden="true" tabindex="-1"></a>plt.show()</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<div class="cell-output cell-output-display">
+<div>
+<figure class="figure">
+<p><img src="blog_files/figure-html/cell-9-output-1.png" class="img-fluid figure-img"></p>
+</figure>
+</div>
+</div>
+</div>
+<p>Show trends of numbers of Male and Female Participants by each year</p>
+<div id="3b7ff226-1f36-42ba-bdc5-90b6239c4628" class="cell" data-tags="[]" data-execution_count="170">
+<div class="sourceCode cell-code" id="cb12"><pre class="sourceCode python code-with-copy"><code class="sourceCode python"><span id="cb12-1"><a href="#cb12-1" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb12-2"><a href="#cb12-2" aria-hidden="true" tabindex="-1"></a>year_sex_medal <span class="op">=</span> df.groupby([<span class="st">'Year'</span>, <span class="st">'Sex'</span>]).size().reset_index(name<span class="op">=</span><span class="st">'Medal'</span>)</span>
+<span id="cb12-3"><a href="#cb12-3" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb12-4"><a href="#cb12-4" aria-hidden="true" tabindex="-1"></a>year_sex_medal_pivot<span class="op">=</span>year_sex_medal.pivot(index<span class="op">=</span><span class="st">'Year'</span>, columns<span class="op">=</span><span class="st">'Sex'</span>, values<span class="op">=</span><span class="st">'Medal'</span>).fillna(<span class="dv">0</span>)</span>
+<span id="cb12-5"><a href="#cb12-5" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb12-6"><a href="#cb12-6" aria-hidden="true" tabindex="-1"></a>plt.figure(figsize<span class="op">=</span>(<span class="dv">20</span>, <span class="dv">10</span>))</span>
+<span id="cb12-7"><a href="#cb12-7" aria-hidden="true" tabindex="-1"></a>fig<span class="op">=</span>plt.gcf()</span>
+<span id="cb12-8"><a href="#cb12-8" aria-hidden="true" tabindex="-1"></a>year_sex_medal_pivot.plot(kind<span class="op">=</span><span class="st">'line'</span>)</span>
+<span id="cb12-9"><a href="#cb12-9" aria-hidden="true" tabindex="-1"></a>plt.xlabel(<span class="st">'Year'</span>)</span>
+<span id="cb12-10"><a href="#cb12-10" aria-hidden="true" tabindex="-1"></a>plt.ylabel(<span class="st">'Number of participants'</span>)</span>
+<span id="cb12-11"><a href="#cb12-11" aria-hidden="true" tabindex="-1"></a>plt.title(<span class="st">'Number of participants by year and gender'</span>)</span>
+<span id="cb12-12"><a href="#cb12-12" aria-hidden="true" tabindex="-1"></a>plt.show()</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<div class="cell-output cell-output-display">
+<pre><code>&lt;Figure size 2000x1000 with 0 Axes&gt;</code></pre>
+</div>
+<div class="cell-output cell-output-display">
+<div>
+<figure class="figure">
+<p><img src="blog_files/figure-html/cell-10-output-2.png" class="img-fluid figure-img"></p>
+</figure>
+</div>
+</div>
+</div>
+<p>Observations:</p>
+<p>Initial Gap: The graph shows a significant gap between the number of male and female participants in the earlier decades of the Olympics. Historically, the participation of women in the Olympics was minimal.</p>
+<p>Recent Trends: In recent decades, the gap between the number of male and female participants has been narrowing. This trend highlights the progress towards gender equality in sports, with more events being made available to female athletes and increased efforts to promote women’s participation in the Olympics.</p>
+<section id="home-advantage" class="level3">
+<h3 class="anchored" data-anchor-id="home-advantage">Home Advantage</h3>
+<div id="f0968b4d-9af3-4f58-8ee6-50870b50fe77" class="cell" data-tags="[]" data-execution_count="174">
+<div class="sourceCode cell-code" id="cb14"><pre class="sourceCode python code-with-copy"><code class="sourceCode python"><span id="cb14-1"><a href="#cb14-1" aria-hidden="true" tabindex="-1"></a><span class="co"># Correct city names in the dataset</span></span>
+<span id="cb14-2"><a href="#cb14-2" aria-hidden="true" tabindex="-1"></a>df[<span class="st">'City'</span>].replace([<span class="st">'Athina'</span>, <span class="st">'Moskva'</span>], [<span class="st">'Athens'</span>, <span class="st">'Moscow'</span>], inplace<span class="op">=</span><span class="va">True</span>)</span>
+<span id="cb14-3"><a href="#cb14-3" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb14-4"><a href="#cb14-4" aria-hidden="true" tabindex="-1"></a><span class="co"># Mapping city to its host country</span></span>
+<span id="cb14-5"><a href="#cb14-5" aria-hidden="true" tabindex="-1"></a>city_to_country <span class="op">=</span> {</span>
+<span id="cb14-6"><a href="#cb14-6" aria-hidden="true" tabindex="-1"></a>    <span class="st">'Tokyo'</span>: <span class="st">'Japan'</span>, <span class="st">'Mexico City'</span>: <span class="st">'Mexico'</span>, <span class="st">'Munich'</span>: <span class="st">'Germany'</span>, <span class="st">'Montreal'</span>: <span class="st">'Canada'</span>,</span>
+<span id="cb14-7"><a href="#cb14-7" aria-hidden="true" tabindex="-1"></a>    <span class="st">'Moscow'</span>: <span class="st">'Russia'</span>, <span class="st">'Los Angeles'</span>: <span class="st">'USA'</span>, <span class="st">'Seoul'</span>: <span class="st">'South Korea'</span>, <span class="st">'Barcelona'</span>: <span class="st">'Spain'</span>,</span>
+<span id="cb14-8"><a href="#cb14-8" aria-hidden="true" tabindex="-1"></a>    <span class="st">'Atlanta'</span>: <span class="st">'USA'</span>, <span class="st">'Sydney'</span>: <span class="st">'Australia'</span>, <span class="st">'Athens'</span>: <span class="st">'Greece'</span>, <span class="st">'Beijing'</span>: <span class="st">'China'</span>,</span>
+<span id="cb14-9"><a href="#cb14-9" aria-hidden="true" tabindex="-1"></a>    <span class="st">'London'</span>: <span class="st">'UK'</span>, <span class="st">'Rio de Janeiro'</span>: <span class="st">'Brazil'</span></span>
+<span id="cb14-10"><a href="#cb14-10" aria-hidden="true" tabindex="-1"></a>}</span>
+<span id="cb14-11"><a href="#cb14-11" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb14-12"><a href="#cb14-12" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb14-13"><a href="#cb14-13" aria-hidden="true" tabindex="-1"></a>df[<span class="st">'Country_Host'</span>] <span class="op">=</span> df[<span class="st">'City'</span>].<span class="bu">map</span>(city_to_country)</span>
+<span id="cb14-14"><a href="#cb14-14" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb14-15"><a href="#cb14-15" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb14-16"><a href="#cb14-16" aria-hidden="true" tabindex="-1"></a>olympics_complete_subset <span class="op">=</span> df[[<span class="st">'Year'</span>, <span class="st">'Country_Host'</span>, <span class="st">'Team'</span>, <span class="st">'Medal'</span>]].drop_duplicates()</span>
+<span id="cb14-17"><a href="#cb14-17" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb14-18"><a href="#cb14-18" aria-hidden="true" tabindex="-1"></a><span class="co"># find year, host nation and team name</span></span>
+<span id="cb14-19"><a href="#cb14-19" aria-hidden="true" tabindex="-1"></a>year_host_team <span class="op">=</span> olympics_complete_subset[[<span class="st">'Year'</span>, <span class="st">'Country_Host'</span>, <span class="st">'Team'</span>]].drop_duplicates()</span>
+<span id="cb14-20"><a href="#cb14-20" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb14-21"><a href="#cb14-21" aria-hidden="true" tabindex="-1"></a><span class="co"># check  if rows where host country is the same as team</span></span>
+<span id="cb14-22"><a href="#cb14-22" aria-hidden="true" tabindex="-1"></a>row_mask_4 <span class="op">=</span> (year_host_team[<span class="st">'Country_Host'</span>] <span class="op">==</span> year_host_team[<span class="st">'Team'</span>])</span>
+<span id="cb14-23"><a href="#cb14-23" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb14-24"><a href="#cb14-24" aria-hidden="true" tabindex="-1"></a><span class="co"># Add years to show one previous and one later year</span></span>
+<span id="cb14-25"><a href="#cb14-25" aria-hidden="true" tabindex="-1"></a>year_host_team[<span class="st">'Prev_Year'</span>] <span class="op">=</span> year_host_team[<span class="st">'Year'</span>] <span class="op">-</span> <span class="dv">4</span></span>
+<span id="cb14-26"><a href="#cb14-26" aria-hidden="true" tabindex="-1"></a>year_host_team[<span class="st">'Next_Year'</span>] <span class="op">=</span> year_host_team[<span class="st">'Year'</span>] <span class="op">+</span> <span class="dv">4</span></span>
+<span id="cb14-27"><a href="#cb14-27" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb14-28"><a href="#cb14-28" aria-hidden="true" tabindex="-1"></a><span class="co">#  only if where host nation and team were the same</span></span>
+<span id="cb14-29"><a href="#cb14-29" aria-hidden="true" tabindex="-1"></a>year_host_team <span class="op">=</span> year_host_team[row_mask_4]</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+</div>
+<div id="522f7fdb-8ef5-4b6c-97e6-872b118b8b65" class="cell" data-tags="[]" data-execution_count="176">
+<div class="sourceCode cell-code" id="cb15"><pre class="sourceCode python code-with-copy"><code class="sourceCode python"><span id="cb15-1"><a href="#cb15-1" aria-hidden="true" tabindex="-1"></a><span class="co"># </span></span>
+<span id="cb15-2"><a href="#cb15-2" aria-hidden="true" tabindex="-1"></a>medal_tally <span class="op">=</span> df.groupby([<span class="st">'Year'</span>, <span class="st">'Team'</span>])[<span class="st">'Medal'</span>].count().reset_index().rename(columns<span class="op">=</span>{<span class="st">'Medal'</span>: <span class="st">'Medal_Won_Corrected'</span>})</span>
+<span id="cb15-3"><a href="#cb15-3" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb15-4"><a href="#cb15-4" aria-hidden="true" tabindex="-1"></a>year_host_team_medal <span class="op">=</span> year_host_team.merge(medal_tally, left_on<span class="op">=</span>[<span class="st">'Year'</span>, <span class="st">'Team'</span>], right_on<span class="op">=</span>[<span class="st">'Year'</span>, <span class="st">'Team'</span>], how<span class="op">=</span><span class="st">'left'</span>)</span>
+<span id="cb15-5"><a href="#cb15-5" aria-hidden="true" tabindex="-1"></a>year_host_team_medal.rename(columns<span class="op">=</span>{<span class="st">'Medal_Won_Corrected'</span>: <span class="st">'Medal_Won_Host_Year'</span>}, inplace<span class="op">=</span><span class="va">True</span>)</span>
+<span id="cb15-6"><a href="#cb15-6" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb15-7"><a href="#cb15-7" aria-hidden="true" tabindex="-1"></a><span class="co"># Calculate medals won by team in previous year</span></span>
+<span id="cb15-8"><a href="#cb15-8" aria-hidden="true" tabindex="-1"></a>year_host_team_medal <span class="op">=</span> year_host_team_medal.merge(medal_tally, left_on<span class="op">=</span>[<span class="st">'Prev_Year'</span>, <span class="st">'Team'</span>], right_on<span class="op">=</span>[<span class="st">'Year'</span>, <span class="st">'Team'</span>], how<span class="op">=</span><span class="st">'left'</span>)</span>
+<span id="cb15-9"><a href="#cb15-9" aria-hidden="true" tabindex="-1"></a>year_host_team_medal.drop(<span class="st">'Year_y'</span>, axis<span class="op">=</span><span class="dv">1</span>, inplace<span class="op">=</span><span class="va">True</span>)</span>
+<span id="cb15-10"><a href="#cb15-10" aria-hidden="true" tabindex="-1"></a>year_host_team_medal.rename(columns<span class="op">=</span>{<span class="st">'Medal_Won_Corrected'</span>: <span class="st">'Medal_Won_Prev_Year'</span>, <span class="st">'Year_x'</span>: <span class="st">'Year'</span>}, inplace<span class="op">=</span><span class="va">True</span>)</span>
+<span id="cb15-11"><a href="#cb15-11" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb15-12"><a href="#cb15-12" aria-hidden="true" tabindex="-1"></a><span class="co"># Calculate the medals won by the team the year after they hosted</span></span>
+<span id="cb15-13"><a href="#cb15-13" aria-hidden="true" tabindex="-1"></a>year_host_team_medal <span class="op">=</span> year_host_team_medal.merge(medal_tally, left_on<span class="op">=</span>[<span class="st">'Next_Year'</span>, <span class="st">'Team'</span>], right_on<span class="op">=</span>[<span class="st">'Year'</span>, <span class="st">'Team'</span>], how<span class="op">=</span><span class="st">'left'</span>)</span>
+<span id="cb15-14"><a href="#cb15-14" aria-hidden="true" tabindex="-1"></a>year_host_team_medal.drop(<span class="st">'Year_y'</span>, axis<span class="op">=</span><span class="dv">1</span>, inplace<span class="op">=</span><span class="va">True</span>)</span>
+<span id="cb15-15"><a href="#cb15-15" aria-hidden="true" tabindex="-1"></a>year_host_team_medal.rename(columns<span class="op">=</span>{<span class="st">'Medal_Won_Corrected'</span>: <span class="st">'Medal_Won_Next_Year'</span>, <span class="st">'Year_x'</span>: <span class="st">'Year'</span>}, inplace<span class="op">=</span><span class="va">True</span>)</span>
+<span id="cb15-16"><a href="#cb15-16" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb15-17"><a href="#cb15-17" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb15-18"><a href="#cb15-18" aria-hidden="true" tabindex="-1"></a>year_host_team_medal.drop([<span class="st">'Prev_Year'</span>, <span class="st">'Next_Year'</span>], axis<span class="op">=</span><span class="dv">1</span>, inplace<span class="op">=</span><span class="va">True</span>)</span>
+<span id="cb15-19"><a href="#cb15-19" aria-hidden="true" tabindex="-1"></a>year_host_team_medal.sort_values(<span class="st">'Year'</span>, ascending<span class="op">=</span><span class="va">True</span>, inplace<span class="op">=</span><span class="va">True</span>)</span>
+<span id="cb15-20"><a href="#cb15-20" aria-hidden="true" tabindex="-1"></a>year_host_team_medal.reset_index(inplace<span class="op">=</span><span class="va">True</span>, drop<span class="op">=</span><span class="va">True</span>)</span>
+<span id="cb15-21"><a href="#cb15-21" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb15-22"><a href="#cb15-22" aria-hidden="true" tabindex="-1"></a><span class="co">#re-ordering</span></span>
+<span id="cb15-23"><a href="#cb15-23" aria-hidden="true" tabindex="-1"></a>year_host_team_medal <span class="op">=</span> year_host_team_medal[[<span class="st">'Year'</span>, <span class="st">'Country_Host'</span>, <span class="st">'Team'</span>, <span class="st">'Medal_Won_Prev_Year'</span>, <span class="st">'Medal_Won_Host_Year'</span>, <span class="st">'Medal_Won_Next_Year'</span>]]</span>
+<span id="cb15-24"><a href="#cb15-24" aria-hidden="true" tabindex="-1"></a>year_host_team_medal.dropna(subset<span class="op">=</span>[<span class="st">'Medal_Won_Host_Year'</span>], inplace<span class="op">=</span><span class="va">True</span>)</span>
+<span id="cb15-25"><a href="#cb15-25" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb15-26"><a href="#cb15-26" aria-hidden="true" tabindex="-1"></a><span class="co"># Display the result</span></span>
+<span id="cb15-27"><a href="#cb15-27" aria-hidden="true" tabindex="-1"></a>year_host_team_medal</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<div class="cell-output cell-output-display" data-execution_count="176">
+<div>
+
+
+<table class="dataframe caption-top table table-sm table-striped small" data-quarto-postprocess="true" data-border="1">
+<thead>
+<tr class="header">
+<th data-quarto-table-cell-role="th"></th>
+<th data-quarto-table-cell-role="th">Year</th>
+<th data-quarto-table-cell-role="th">Country_Host</th>
+<th data-quarto-table-cell-role="th">Team</th>
+<th data-quarto-table-cell-role="th">Medal_Won_Prev_Year</th>
+<th data-quarto-table-cell-role="th">Medal_Won_Host_Year</th>
+<th data-quarto-table-cell-role="th">Medal_Won_Next_Year</th>
+</tr>
+</thead>
+<tbody>
+<tr class="odd">
+<td data-quarto-table-cell-role="th">0</td>
+<td>1896</td>
+<td>Greece</td>
+<td>Greece</td>
+<td>NaN</td>
+<td>140</td>
+<td>4.0</td>
+</tr>
+<tr class="even">
+<td data-quarto-table-cell-role="th">1</td>
+<td>1906</td>
+<td>Greece</td>
+<td>Greece</td>
+<td>NaN</td>
+<td>318</td>
+<td>NaN</td>
+</tr>
+<tr class="odd">
+<td data-quarto-table-cell-role="th">2</td>
+<td>1964</td>
+<td>Japan</td>
+<td>Japan</td>
+<td>346.0</td>
+<td>531</td>
+<td>384.0</td>
+</tr>
+<tr class="even">
+<td data-quarto-table-cell-role="th">3</td>
+<td>1968</td>
+<td>Mexico</td>
+<td>Mexico</td>
+<td>118.0</td>
+<td>446</td>
+<td>281.0</td>
+</tr>
+<tr class="odd">
+<td data-quarto-table-cell-role="th">4</td>
+<td>1976</td>
+<td>Canada</td>
+<td>Canada</td>
+<td>421.0</td>
+<td>620</td>
+<td>82.0</td>
+</tr>
+<tr class="even">
+<td data-quarto-table-cell-role="th">5</td>
+<td>1988</td>
+<td>South Korea</td>
+<td>South Korea</td>
+<td>278.0</td>
+<td>603</td>
+<td>363.0</td>
+</tr>
+<tr class="odd">
+<td data-quarto-table-cell-role="th">6</td>
+<td>1992</td>
+<td>Spain</td>
+<td>Spain</td>
+<td>346.0</td>
+<td>582</td>
+<td>380.0</td>
+</tr>
+<tr class="even">
+<td data-quarto-table-cell-role="th">7</td>
+<td>2000</td>
+<td>Australia</td>
+<td>Australia</td>
+<td>542.0</td>
+<td>762</td>
+<td>585.0</td>
+</tr>
+<tr class="odd">
+<td data-quarto-table-cell-role="th">8</td>
+<td>2004</td>
+<td>Greece</td>
+<td>Greece</td>
+<td>175.0</td>
+<td>495</td>
+<td>172.0</td>
+</tr>
+<tr class="even">
+<td data-quarto-table-cell-role="th">9</td>
+<td>2008</td>
+<td>China</td>
+<td>China</td>
+<td>490.0</td>
+<td>708</td>
+<td>463.0</td>
+</tr>
+<tr class="odd">
+<td data-quarto-table-cell-role="th">10</td>
+<td>2016</td>
+<td>Brazil</td>
+<td>Brazil</td>
+<td>294.0</td>
+<td>571</td>
+<td>NaN</td>
+</tr>
+</tbody>
+</table>
+
+</div>
+</div>
+</div>
+<div id="2107dc88-8093-4668-b288-297936cb9611" class="cell" data-tags="[]" data-execution_count="178">
+<div class="sourceCode cell-code" id="cb16"><pre class="sourceCode python code-with-copy"><code class="sourceCode python"><span id="cb16-1"><a href="#cb16-1" aria-hidden="true" tabindex="-1"></a><span class="co"># Create a bar plot to visualize the medals won before, during, and after hosting the Olympics</span></span>
+<span id="cb16-2"><a href="#cb16-2" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb16-3"><a href="#cb16-3" aria-hidden="true" tabindex="-1"></a>plt.figure(figsize<span class="op">=</span>(<span class="dv">14</span>, <span class="dv">8</span>))</span>
+<span id="cb16-4"><a href="#cb16-4" aria-hidden="true" tabindex="-1"></a><span class="cf">for</span> index, row <span class="kw">in</span> year_host_team_medal.iterrows():</span>
+<span id="cb16-5"><a href="#cb16-5" aria-hidden="true" tabindex="-1"></a>    plt.plot([row[<span class="st">'Year'</span>]<span class="op">-</span><span class="dv">4</span>, row[<span class="st">'Year'</span>], row[<span class="st">'Year'</span>]<span class="op">+</span><span class="dv">4</span>],</span>
+<span id="cb16-6"><a href="#cb16-6" aria-hidden="true" tabindex="-1"></a>             [row[<span class="st">'Medal_Won_Prev_Year'</span>], row[<span class="st">'Medal_Won_Host_Year'</span>], row[<span class="st">'Medal_Won_Next_Year'</span>]],</span>
+<span id="cb16-7"><a href="#cb16-7" aria-hidden="true" tabindex="-1"></a>             marker<span class="op">=</span><span class="st">'o'</span>, label<span class="op">=</span>row[<span class="st">'Country_Host'</span>])</span>
+<span id="cb16-8"><a href="#cb16-8" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb16-9"><a href="#cb16-9" aria-hidden="true" tabindex="-1"></a>plt.xlabel(<span class="st">'Year'</span>)</span>
+<span id="cb16-10"><a href="#cb16-10" aria-hidden="true" tabindex="-1"></a>plt.ylabel(<span class="st">'Number of Medals'</span>)</span>
+<span id="cb16-11"><a href="#cb16-11" aria-hidden="true" tabindex="-1"></a>plt.title(<span class="st">'Medals Won by Host Countries: Before, During, and After Hosting Olympics'</span>)</span>
+<span id="cb16-12"><a href="#cb16-12" aria-hidden="true" tabindex="-1"></a>plt.legend(loc<span class="op">=</span><span class="st">'upper left'</span>, bbox_to_anchor<span class="op">=</span>(<span class="dv">1</span>, <span class="dv">1</span>))</span>
+<span id="cb16-13"><a href="#cb16-13" aria-hidden="true" tabindex="-1"></a>plt.grid(<span class="va">True</span>)</span>
+<span id="cb16-14"><a href="#cb16-14" aria-hidden="true" tabindex="-1"></a>plt.show()</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<div class="cell-output cell-output-display">
+<div>
+<figure class="figure">
+<p><img src="blog_files/figure-html/cell-13-output-1.png" class="img-fluid figure-img"></p>
+</figure>
+</div>
+</div>
+</div>
+<p>Analyze the dominance of countries in the Olympics and the sports they excel in</p>
+<div id="457e10e0-ece5-47e8-9202-e623c97652e9" class="cell" data-tags="[]" data-execution_count="181">
+<div class="sourceCode cell-code" id="cb17"><pre class="sourceCode python code-with-copy"><code class="sourceCode python"><span id="cb17-1"><a href="#cb17-1" aria-hidden="true" tabindex="-1"></a><span class="co"># Calculate the total number of medals won by each country</span></span>
+<span id="cb17-2"><a href="#cb17-2" aria-hidden="true" tabindex="-1"></a>total_medals <span class="op">=</span> df[df[<span class="st">'Medal'</span>] <span class="op">!=</span> <span class="st">'NA'</span>].groupby(<span class="st">'Country'</span>)[<span class="st">'Medal'</span>].count().reset_index()</span>
+<span id="cb17-3"><a href="#cb17-3" aria-hidden="true" tabindex="-1"></a>total_medals <span class="op">=</span> total_medals.sort_values(by<span class="op">=</span><span class="st">'Medal'</span>, ascending<span class="op">=</span><span class="va">False</span>).reset_index(drop<span class="op">=</span><span class="va">True</span>)</span>
+<span id="cb17-4"><a href="#cb17-4" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb17-5"><a href="#cb17-5" aria-hidden="true" tabindex="-1"></a><span class="co"># Display the top 10 countries</span></span>
+<span id="cb17-6"><a href="#cb17-6" aria-hidden="true" tabindex="-1"></a>top_countries <span class="op">=</span> total_medals.head(<span class="dv">10</span>)</span>
+<span id="cb17-7"><a href="#cb17-7" aria-hidden="true" tabindex="-1"></a>top_countries</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<div class="cell-output cell-output-display" data-execution_count="181">
+<div>
+
+
+<table class="dataframe caption-top table table-sm table-striped small" data-quarto-postprocess="true" data-border="1">
+<thead>
+<tr class="header">
+<th data-quarto-table-cell-role="th"></th>
+<th data-quarto-table-cell-role="th">Country</th>
+<th data-quarto-table-cell-role="th">Medal</th>
+</tr>
+</thead>
+<tbody>
+<tr class="odd">
+<td data-quarto-table-cell-role="th">0</td>
+<td>USA</td>
+<td>5637</td>
+</tr>
+<tr class="even">
+<td data-quarto-table-cell-role="th">1</td>
+<td>Russia</td>
+<td>3947</td>
+</tr>
+<tr class="odd">
+<td data-quarto-table-cell-role="th">2</td>
+<td>Germany</td>
+<td>3756</td>
+</tr>
+<tr class="even">
+<td data-quarto-table-cell-role="th">3</td>
+<td>UK</td>
+<td>2068</td>
+</tr>
+<tr class="odd">
+<td data-quarto-table-cell-role="th">4</td>
+<td>France</td>
+<td>1777</td>
+</tr>
+<tr class="even">
+<td data-quarto-table-cell-role="th">5</td>
+<td>Italy</td>
+<td>1637</td>
+</tr>
+<tr class="odd">
+<td data-quarto-table-cell-role="th">6</td>
+<td>Sweden</td>
+<td>1536</td>
+</tr>
+<tr class="even">
+<td data-quarto-table-cell-role="th">7</td>
+<td>Canada</td>
+<td>1352</td>
+</tr>
+<tr class="odd">
+<td data-quarto-table-cell-role="th">8</td>
+<td>Australia</td>
+<td>1349</td>
+</tr>
+<tr class="even">
+<td data-quarto-table-cell-role="th">9</td>
+<td>Hungary</td>
+<td>1135</td>
+</tr>
+</tbody>
+</table>
+
+</div>
+</div>
+</div>
+<div id="5584ec67-c7db-4b53-b0eb-2325223eae92" class="cell" data-tags="[]" data-execution_count="183">
+<div class="sourceCode cell-code" id="cb18"><pre class="sourceCode python code-with-copy"><code class="sourceCode python"><span id="cb18-1"><a href="#cb18-1" aria-hidden="true" tabindex="-1"></a><span class="co"># include only the first country </span></span>
+<span id="cb18-2"><a href="#cb18-2" aria-hidden="true" tabindex="-1"></a>top_countries_list <span class="op">=</span> top_countries[<span class="st">'Country'</span>].tolist()</span>
+<span id="cb18-3"><a href="#cb18-3" aria-hidden="true" tabindex="-1"></a>df_top_countries <span class="op">=</span> df[df[<span class="st">'Country'</span>].isin(top_countries_list) <span class="op">&amp;</span> (df[<span class="st">'Medal'</span>] <span class="op">!=</span> <span class="st">'NA'</span>)]</span>
+<span id="cb18-4"><a href="#cb18-4" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb18-5"><a href="#cb18-5" aria-hidden="true" tabindex="-1"></a><span class="co"># Calculate the total number of medals for each country </span></span>
+<span id="cb18-6"><a href="#cb18-6" aria-hidden="true" tabindex="-1"></a>country_sport_medals <span class="op">=</span> df_top_countries.groupby([<span class="st">'Country'</span>, <span class="st">'Sport'</span>])[<span class="st">'Medal'</span>].count().reset_index()</span>
+<span id="cb18-7"><a href="#cb18-7" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb18-8"><a href="#cb18-8" aria-hidden="true" tabindex="-1"></a><span class="co"># sorting medals in descending order and picking the top entry for each country </span></span>
+<span id="cb18-9"><a href="#cb18-9" aria-hidden="true" tabindex="-1"></a>top_sport_per_country <span class="op">=</span> country_sport_medals.sort_values(<span class="st">'Medal'</span>, ascending<span class="op">=</span><span class="va">False</span>).groupby(<span class="st">'Country'</span>).head(<span class="dv">1</span>).reset_index(drop<span class="op">=</span><span class="va">True</span>)</span>
+<span id="cb18-10"><a href="#cb18-10" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb18-11"><a href="#cb18-11" aria-hidden="true" tabindex="-1"></a><span class="co"># Sort the top sports for each country by the number of medals in descending order to rank them</span></span>
+<span id="cb18-12"><a href="#cb18-12" aria-hidden="true" tabindex="-1"></a>top_sport_per_country <span class="op">=</span> top_sport_per_country.sort_values(<span class="st">'Medal'</span>, ascending<span class="op">=</span><span class="va">False</span>).reset_index(drop<span class="op">=</span><span class="va">True</span>)</span>
+<span id="cb18-13"><a href="#cb18-13" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb18-14"><a href="#cb18-14" aria-hidden="true" tabindex="-1"></a><span class="co">#show result</span></span>
+<span id="cb18-15"><a href="#cb18-15" aria-hidden="true" tabindex="-1"></a>top_sport_per_country.head(<span class="dv">10</span>)</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<div class="cell-output cell-output-display" data-execution_count="183">
+<div>
+
+
+<table class="dataframe caption-top table table-sm table-striped small" data-quarto-postprocess="true" data-border="1">
+<thead>
+<tr class="header">
+<th data-quarto-table-cell-role="th"></th>
+<th data-quarto-table-cell-role="th">Country</th>
+<th data-quarto-table-cell-role="th">Sport</th>
+<th data-quarto-table-cell-role="th">Medal</th>
+</tr>
+</thead>
+<tbody>
+<tr class="odd">
+<td data-quarto-table-cell-role="th">0</td>
+<td>USA</td>
+<td>Athletics</td>
+<td>1080</td>
+</tr>
+<tr class="even">
+<td data-quarto-table-cell-role="th">1</td>
+<td>Germany</td>
+<td>Rowing</td>
+<td>471</td>
+</tr>
+<tr class="odd">
+<td data-quarto-table-cell-role="th">2</td>
+<td>Australia</td>
+<td>Swimming</td>
+<td>412</td>
+</tr>
+<tr class="even">
+<td data-quarto-table-cell-role="th">3</td>
+<td>Russia</td>
+<td>Gymnastics</td>
+<td>399</td>
+</tr>
+<tr class="odd">
+<td data-quarto-table-cell-role="th">4</td>
+<td>Italy</td>
+<td>Fencing</td>
+<td>359</td>
+</tr>
+<tr class="even">
+<td data-quarto-table-cell-role="th">5</td>
+<td>Canada</td>
+<td>Ice Hockey</td>
+<td>348</td>
+</tr>
+<tr class="odd">
+<td data-quarto-table-cell-role="th">6</td>
+<td>UK</td>
+<td>Athletics</td>
+<td>338</td>
+</tr>
+<tr class="even">
+<td data-quarto-table-cell-role="th">7</td>
+<td>France</td>
+<td>Fencing</td>
+<td>310</td>
+</tr>
+<tr class="odd">
+<td data-quarto-table-cell-role="th">8</td>
+<td>Hungary</td>
+<td>Fencing</td>
+<td>236</td>
+</tr>
+<tr class="even">
+<td data-quarto-table-cell-role="th">9</td>
+<td>Sweden</td>
+<td>Ice Hockey</td>
+<td>217</td>
+</tr>
+</tbody>
+</table>
+
+</div>
+</div>
+</div>
+<div id="4d43002f-7002-44a3-b8e6-0c280c18d84b" class="cell" data-tags="[]" data-execution_count="185">
+<div class="sourceCode cell-code" id="cb19"><pre class="sourceCode python code-with-copy"><code class="sourceCode python"><span id="cb19-1"><a href="#cb19-1" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb19-2"><a href="#cb19-2" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb19-3"><a href="#cb19-3" aria-hidden="true" tabindex="-1"></a><span class="co"># Plot the total number of medals won by the top countries</span></span>
+<span id="cb19-4"><a href="#cb19-4" aria-hidden="true" tabindex="-1"></a>plt.figure(figsize<span class="op">=</span>(<span class="dv">12</span>, <span class="dv">8</span>))</span>
+<span id="cb19-5"><a href="#cb19-5" aria-hidden="true" tabindex="-1"></a>sns.barplot(data<span class="op">=</span>top_countries, x<span class="op">=</span><span class="st">'Medal'</span>, y<span class="op">=</span><span class="st">'Country'</span>, palette<span class="op">=</span><span class="st">'viridis'</span>)</span>
+<span id="cb19-6"><a href="#cb19-6" aria-hidden="true" tabindex="-1"></a>plt.title(<span class="st">'Top 10 Countries by Total Number of Medals'</span>)</span>
+<span id="cb19-7"><a href="#cb19-7" aria-hidden="true" tabindex="-1"></a>plt.xlabel(<span class="st">'Total Medals'</span>)</span>
+<span id="cb19-8"><a href="#cb19-8" aria-hidden="true" tabindex="-1"></a>plt.ylabel(<span class="st">'Country'</span>)</span>
+<span id="cb19-9"><a href="#cb19-9" aria-hidden="true" tabindex="-1"></a>plt.show()</span>
+<span id="cb19-10"><a href="#cb19-10" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb19-11"><a href="#cb19-11" aria-hidden="true" tabindex="-1"></a><span class="co"># Plot the top sport for each of the top countries</span></span>
+<span id="cb19-12"><a href="#cb19-12" aria-hidden="true" tabindex="-1"></a>plt.figure(figsize<span class="op">=</span>(<span class="dv">14</span>, <span class="dv">8</span>))</span>
+<span id="cb19-13"><a href="#cb19-13" aria-hidden="true" tabindex="-1"></a>sns.barplot(data<span class="op">=</span>top_sport_per_country, x<span class="op">=</span><span class="st">'Medal'</span>, y<span class="op">=</span><span class="st">'Country'</span>, hue<span class="op">=</span><span class="st">'Sport'</span>, dodge<span class="op">=</span><span class="va">False</span>, palette<span class="op">=</span><span class="st">'viridis'</span>)</span>
+<span id="cb19-14"><a href="#cb19-14" aria-hidden="true" tabindex="-1"></a>plt.title(<span class="st">'Top Sport for Each of the Top 10 Countries'</span>)</span>
+<span id="cb19-15"><a href="#cb19-15" aria-hidden="true" tabindex="-1"></a>plt.xlabel(<span class="st">'Total Medals in Sport'</span>)</span>
+<span id="cb19-16"><a href="#cb19-16" aria-hidden="true" tabindex="-1"></a>plt.ylabel(<span class="st">'Country'</span>)</span>
+<span id="cb19-17"><a href="#cb19-17" aria-hidden="true" tabindex="-1"></a>plt.legend(title<span class="op">=</span><span class="st">'Sport'</span>, bbox_to_anchor<span class="op">=</span>(<span class="fl">1.05</span>, <span class="dv">1</span>), loc<span class="op">=</span><span class="st">'upper left'</span>)</span>
+<span id="cb19-18"><a href="#cb19-18" aria-hidden="true" tabindex="-1"></a>plt.show()</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<div class="cell-output cell-output-display">
+<div>
+<figure class="figure">
+<p><img src="blog_files/figure-html/cell-16-output-1.png" class="img-fluid figure-img"></p>
+</figure>
+</div>
+</div>
+<div class="cell-output cell-output-display">
+<div>
+<figure class="figure">
+<p><img src="blog_files/figure-html/cell-16-output-2.png" class="img-fluid figure-img"></p>
+</figure>
+</div>
+</div>
+</div>
+</section>
+</section>
+<section id="results" class="level1">
+<h1>Results:</h1>
+<p>Key Findings</p>
+<p>Gender Representation: The analysis revealed a substantial gap between male and female participants in the early years of the Olympics. However, this gap has narrowed significantly in recent decades. Key milestones, such as the introduction of Title IX in the United States and the establishment of the Women’s Sports Foundation, correlate with notable increases in female participation.</p>
+<p>National Dominance: The early 20th century was dominated by the United States and Great Britain, as shown in the medal counts. The mid-20th century saw the rise of the Soviet Union and Eastern Bloc countries, which invested heavily in sports programs. In recent decades, China has emerged as a dominant force, particularly since the 2008 Beijing Olympics, reflecting its substantial investment in sports infrastructure and athlete development. The analysis of the top sports for each country revealed strategic focuses, with the United States excelling in track and field, swimming, and gymnastics, while China has shown strength in diving, gymnastics, and weightlifting.</p>
+<p>Home Country Advantage: Hosting the Olympics has a noticeable impact on a country’s medal count. Host countries typically see a spike in medals won during the year they host the Games. The data for countries like the United States (1984), China (2008), and Great Britain (2012) illustrate this trend, highlighting the benefits of competing at home country.</p>
+</section>
+<section id="discussion" class="level1">
+<h1>Discussion:</h1>
+<p>The Olympic Games, which began in Athens in 1896 with the first modern-era Games, provide a rich context for analyzing changes in national dominance, gender representation, and the impact of economic factors on global sports performance. Over more than 120 years, these Games have evolved significantly, revealing insights into how various factors have influenced Olympic success and shaped the competitive landscape. This extensive analysis of Olympic history highlights the shifting dynamics that define the Games and offers a deeper understanding of the forces at play in shaping athletic achievements on the world stage.</p>
+<p>Gender Representation in the Olympics</p>
+<p>Gender representation in the Olympics has evolved significantly since the inception of the modern Games in 1896. Initially, the participation of women in the Olympics was minimal, with only a few events available to female athletes. The early 20th century saw a gradual expansion of women’s roles, but meaningful inclusion and equality remained limited for several decades.</p>
+<p>In the early years, the Olympics were predominantly male-dominated, reflecting broader societal norms and attitudes toward women’s participation in competitive sports. The 1900 Paris Olympics were notable for featuring the first female athletes, but their presence was limited to just a few events, including tennis and golf. Women’s participation remained sparse in subsequent Games, with cultural and institutional barriers preventing their full inclusion.</p>
+<p>1980s and 1990s: Accelerating Change</p>
+<p>The 1980s and 1990s were transformative decades for gender equality in the Olympics. Our visualizations illustrate the impact of landmark policies and organizational changes. For instance, the establishment of the Women’s Sports Foundation in 1974 and the passage of Title IX in the United States in 1972 are reflected in the data as significant increases in female athlete participation and event diversity. The 1984 Los Angeles Olympics is particularly notable in our data, featuring a record number of female athletes and the introduction of new events, such as the women’s marathon.</p>
+<p>Further analysis of the 1996 Atlanta Olympics shows continued progress, with an expanding range of sports featuring female athletes. Our charts and graphs highlight this period as a turning point, demonstrating how media coverage and public recognition of female athletes began to increase, influencing both participation rates and the overall visibility of women in sports.</p>
+<p>2000s: Expanding Horizons</p>
+<p>The early 2000s marked a period of significant expansion in gender representation within the Olympics. Our data visualizations for this decade reveal a consistent increase in the number of female athletes and events tailored to them. The 2000 Sydney Olympics, 2004 Athens Olympics, and 2008 Beijing Olympics are particularly noteworthy, as they each introduced new sports and events with increased female participation. As we approach the 2024 Paris Olympics, it is clear that the momentum towards gender parity has not only persisted but has been amplified. Although detailed data and visualizations are still forthcoming due to the ongoing nature of the Games, preliminary observations indicate a strong emphasis on promoting gender equality. The 2024 Olympics are poised to set new standards in gender representation, continuing the trends established in previous decades while further enhancing the visibility and opportunities available to female athletes.</p>
+<p>2024 Paris Olympics:</p>
+<p>The 2024 Paris Olympics marks a significant milestone in the history of the Games as it is set to achieve full gender parity for the first time. This achievement is a culmination of years of effort and policy changes aimed at promoting gender equality in sports.</p>
+<p>Equal Participation</p>
+<p>For the first time, the number of male and female athletes participating in the Olympics will be equal. This parity is a testament to the International Olympic Committee’s (IOC) commitment to gender equality, ensuring that women athletes have the same opportunities to compete as their male counterparts. The 2024 Paris Olympics will feature 50% female participation, a goal that has been progressively achieved over the past few Olympic Games.</p>
+<p>Cited: https://olympics.com/en/paris-2024/information/gender-equality</p>
+<p>Home Country Advantage: Analysis and Visualization</p>
+<p>Home country advantage in the Olympics is a well-documented phenomenon where athletes perform better when competing in their home country. This advantage is a key aspect of our analysis of Olympic dynamics, as it can significantly influence the outcomes of events.</p>
+<p>The plot aims to show how the number of medals won by host countries changes in three distinct periods:</p>
+<p>Before Hosting: Medals won in the years leading up to the Olympics. During Hosting: Medals won in the year when the country hosts the Olympics. After Hosting: Medals won in the years following the Olympics. Trends: By examining the lines for different countries, you can observe trends in how hosting the Olympics affects medal counts. A common pattern might be an increase in medals won during the hosting year compared to the years before and after. Variability: Some countries may show a significant spike in medals during the hosting year, while others might have only a slight increase or no change. This variability can help identify how strong the home country advantage is and whether certain countries experience a more pronounced effect.</p>
+<p>Here are some possible reason for home country advantage observed in Olympic Games:</p>
+<p>Familiarity: Athletes competing in their home country are familiar with the competition venues, including the local climate, facilities, and track conditions. This familiarity can reduce performance anxiety and enhance comfort, leading to better results.</p>
+<p>Support and Motivation: Home country athletes benefit from the support of local fans, which can significantly boost their morale and motivation. The presence of family, friends, and enthusiastic crowds creates a supportive atmosphere that can positively impact performance.</p>
+<p>Training and Preparation: Host countries often invest heavily in infrastructure and training facilities leading up to the Games. This investment not only improves the quality of training but also ensures that athletes are well-prepared for the competition. Additionally, national pride and the desire to perform well for their country can drive athletes to excel.</p>
+<p>Strategic Advantage: Host nations might have the opportunity to focus on specific events or sports where they have a competitive edge. The ability to strategize and allocate resources effectively contributes to enhanced performance in targeted events.</p>
+<p>Analyzing the Dominance of Countries in the Olympics and Their Sports Excellence</p>
+<p>National dominance in the Olympic Games has experienced notable shifts over the past century, influenced by various factors such as geopolitical changes, economic conditions, and strategic investments in sports. Analyzing data from 1896 to 2016 reveals intriguing patterns and transitions in Olympic dominance, which align with our data visualizations.</p>
+<p>Early 20th Century Dominance</p>
+<p>In the early 20th century, the United States and Great Britain were prominent leaders in Olympic medal counts. This dominance is clearly reflected in our historical data visualizations, which show these nations consistently at the top of the medal standings. Mid-20th Century Shifts</p>
+<p>The mid-20th century brought a significant shift in Olympic dominance, with the Soviet Union and Eastern Bloc countries emerging as formidable contenders. The data visualizations for this era illustrate the rise of these nations, driven by state-sponsored sports programs and comprehensive training regimens. The Soviet Union’s dominance, particularly in sports such as gymnastics and weightlifting, is evident in the medal counts from this period. Our charts highlight the strategic emphasis these countries placed on developing elite athletes through government-funded programs, which resulted in substantial medal hauls.</p>
+<p>Recent Decades and Emerging Powers</p>
+<p>The landscape of Olympic dominance has evolved significantly in recent decades. The rise of China and Australia is a prominent feature in our data visualizations, showcasing their increasing success on the global stage.</p>
+<p>China: The 2008 Beijing Olympics marked a turning point, with China demonstrating its growing athletic prowess. Our visualizations capture the dramatic increase in China’s medal count, reflecting the country’s substantial investments in sports infrastructure and athlete development. The data illustrates China’s successful strategy of focusing resources on specific sports, resulting in top rankings across a range of events. Australia: Australia’s consistent performance, particularly in swimming and athletics, is another notable trend.</p>
+<p>Overall, the evolution of the Olympic Games underscores the intersection of societal changes with sports performance. As we analyze these trends and look forward to the ongoing sames in Paris and upcoming 2028 games in Los Angeles, we gain a deeper understanding of the forces driving athletic success and the dynamic nature of Olympic competition. The ongoing analysis will continue to reveal how historical, economic, and strategic elements converge to define the future of the Olympic Games, shaping the landscape of global sports for years to come.</p>
+
+
+</section>
+
+</main> <!-- /main -->
+<script id="quarto-html-after-body" type="application/javascript">
+window.document.addEventListener("DOMContentLoaded", function (event) {
+  const toggleBodyColorMode = (bsSheetEl) => {
+    const mode = bsSheetEl.getAttribute("data-mode");
+    const bodyEl = window.document.querySelector("body");
+    if (mode === "dark") {
+      bodyEl.classList.add("quarto-dark");
+      bodyEl.classList.remove("quarto-light");
+    } else {
+      bodyEl.classList.add("quarto-light");
+      bodyEl.classList.remove("quarto-dark");
+    }
+  }
+  const toggleBodyColorPrimary = () => {
+    const bsSheetEl = window.document.querySelector("link#quarto-bootstrap");
+    if (bsSheetEl) {
+      toggleBodyColorMode(bsSheetEl);
+    }
+  }
+  toggleBodyColorPrimary();  
+  const icon = "";
+  const anchorJS = new window.AnchorJS();
+  anchorJS.options = {
+    placement: 'right',
+    icon: icon
+  };
+  anchorJS.add('.anchored');
+  const isCodeAnnotation = (el) => {
+    for (const clz of el.classList) {
+      if (clz.startsWith('code-annotation-')) {                     
+        return true;
+      }
+    }
+    return false;
+  }
+  const onCopySuccess = function(e) {
+    // button target
+    const button = e.trigger;
+    // don't keep focus
+    button.blur();
+    // flash "checked"
+    button.classList.add('code-copy-button-checked');
+    var currentTitle = button.getAttribute("title");
+    button.setAttribute("title", "Copied!");
+    let tooltip;
+    if (window.bootstrap) {
+      button.setAttribute("data-bs-toggle", "tooltip");
+      button.setAttribute("data-bs-placement", "left");
+      button.setAttribute("data-bs-title", "Copied!");
+      tooltip = new bootstrap.Tooltip(button, 
+        { trigger: "manual", 
+          customClass: "code-copy-button-tooltip",
+          offset: [0, -8]});
+      tooltip.show();    
+    }
+    setTimeout(function() {
+      if (tooltip) {
+        tooltip.hide();
+        button.removeAttribute("data-bs-title");
+        button.removeAttribute("data-bs-toggle");
+        button.removeAttribute("data-bs-placement");
+      }
+      button.setAttribute("title", currentTitle);
+      button.classList.remove('code-copy-button-checked');
+    }, 1000);
+    // clear code selection
+    e.clearSelection();
+  }
+  const getTextToCopy = function(trigger) {
+      const codeEl = trigger.previousElementSibling.cloneNode(true);
+      for (const childEl of codeEl.children) {
+        if (isCodeAnnotation(childEl)) {
+          childEl.remove();
+        }
+      }
+      return codeEl.innerText;
+  }
+  const clipboard = new window.ClipboardJS('.code-copy-button:not([data-in-quarto-modal])', {
+    text: getTextToCopy
+  });
+  clipboard.on('success', onCopySuccess);
+  if (window.document.getElementById('quarto-embedded-source-code-modal')) {
+    // For code content inside modals, clipBoardJS needs to be initialized with a container option
+    // TODO: Check when it could be a function (https://github.com/zenorocha/clipboard.js/issues/860)
+    const clipboardModal = new window.ClipboardJS('.code-copy-button[data-in-quarto-modal]', {
+      text: getTextToCopy,
+      container: window.document.getElementById('quarto-embedded-source-code-modal')
+    });
+    clipboardModal.on('success', onCopySuccess);
+  }
+    var localhostRegex = new RegExp(/^(?:http|https):\/\/localhost\:?[0-9]*\//);
+    var mailtoRegex = new RegExp(/^mailto:/);
+      var filterRegex = new RegExp("https:\/\/nancyysuii\.github\.io\/dh140blog\/");
+    var isInternal = (href) => {
+        return filterRegex.test(href) || localhostRegex.test(href) || mailtoRegex.test(href);
+    }
+    // Inspect non-navigation links and adorn them if external
+ 	var links = window.document.querySelectorAll('a[href]:not(.nav-link):not(.navbar-brand):not(.toc-action):not(.sidebar-link):not(.sidebar-item-toggle):not(.pagination-link):not(.no-external):not([aria-hidden]):not(.dropdown-item):not(.quarto-navigation-tool):not(.about-link)');
+    for (var i=0; i<links.length; i++) {
+      const link = links[i];
+      if (!isInternal(link.href)) {
+        // undo the damage that might have been done by quarto-nav.js in the case of
+        // links that we want to consider external
+        if (link.dataset.originalHref !== undefined) {
+          link.href = link.dataset.originalHref;
+        }
+      }
+    }
+  function tippyHover(el, contentFn, onTriggerFn, onUntriggerFn) {
+    const config = {
+      allowHTML: true,
+      maxWidth: 500,
+      delay: 100,
+      arrow: false,
+      appendTo: function(el) {
+          return el.parentElement;
+      },
+      interactive: true,
+      interactiveBorder: 10,
+      theme: 'quarto',
+      placement: 'bottom-start',
+    };
+    if (contentFn) {
+      config.content = contentFn;
+    }
+    if (onTriggerFn) {
+      config.onTrigger = onTriggerFn;
+    }
+    if (onUntriggerFn) {
+      config.onUntrigger = onUntriggerFn;
+    }
+    window.tippy(el, config); 
+  }
+  const noterefs = window.document.querySelectorAll('a[role="doc-noteref"]');
+  for (var i=0; i<noterefs.length; i++) {
+    const ref = noterefs[i];
+    tippyHover(ref, function() {
+      // use id or data attribute instead here
+      let href = ref.getAttribute('data-footnote-href') || ref.getAttribute('href');
+      try { href = new URL(href).hash; } catch {}
+      const id = href.replace(/^#\/?/, "");
+      const note = window.document.getElementById(id);
+      if (note) {
+        return note.innerHTML;
+      } else {
+        return "";
+      }
+    });
+  }
+  const xrefs = window.document.querySelectorAll('a.quarto-xref');
+  const processXRef = (id, note) => {
+    // Strip column container classes
+    const stripColumnClz = (el) => {
+      el.classList.remove("page-full", "page-columns");
+      if (el.children) {
+        for (const child of el.children) {
+          stripColumnClz(child);
+        }
+      }
+    }
+    stripColumnClz(note)
+    if (id === null || id.startsWith('sec-')) {
+      // Special case sections, only their first couple elements
+      const container = document.createElement("div");
+      if (note.children && note.children.length > 2) {
+        container.appendChild(note.children[0].cloneNode(true));
+        for (let i = 1; i < note.children.length; i++) {
+          const child = note.children[i];
+          if (child.tagName === "P" && child.innerText === "") {
+            continue;
+          } else {
+            container.appendChild(child.cloneNode(true));
+            break;
+          }
+        }
+        if (window.Quarto?.typesetMath) {
+          window.Quarto.typesetMath(container);
+        }
+        return container.innerHTML
+      } else {
+        if (window.Quarto?.typesetMath) {
+          window.Quarto.typesetMath(note);
+        }
+        return note.innerHTML;
+      }
+    } else {
+      // Remove any anchor links if they are present
+      const anchorLink = note.querySelector('a.anchorjs-link');
+      if (anchorLink) {
+        anchorLink.remove();
+      }
+      if (window.Quarto?.typesetMath) {
+        window.Quarto.typesetMath(note);
+      }
+      // TODO in 1.5, we should make sure this works without a callout special case
+      if (note.classList.contains("callout")) {
+        return note.outerHTML;
+      } else {
+        return note.innerHTML;
+      }
+    }
+  }
+  for (var i=0; i<xrefs.length; i++) {
+    const xref = xrefs[i];
+    tippyHover(xref, undefined, function(instance) {
+      instance.disable();
+      let url = xref.getAttribute('href');
+      let hash = undefined; 
+      if (url.startsWith('#')) {
+        hash = url;
+      } else {
+        try { hash = new URL(url).hash; } catch {}
+      }
+      if (hash) {
+        const id = hash.replace(/^#\/?/, "");
+        const note = window.document.getElementById(id);
+        if (note !== null) {
+          try {
+            const html = processXRef(id, note.cloneNode(true));
+            instance.setContent(html);
+          } finally {
+            instance.enable();
+            instance.show();
+          }
+        } else {
+          // See if we can fetch this
+          fetch(url.split('#')[0])
+          .then(res => res.text())
+          .then(html => {
+            const parser = new DOMParser();
+            const htmlDoc = parser.parseFromString(html, "text/html");
+            const note = htmlDoc.getElementById(id);
+            if (note !== null) {
+              const html = processXRef(id, note);
+              instance.setContent(html);
+            } 
+          }).finally(() => {
+            instance.enable();
+            instance.show();
+          });
+        }
+      } else {
+        // See if we can fetch a full url (with no hash to target)
+        // This is a special case and we should probably do some content thinning / targeting
+        fetch(url)
+        .then(res => res.text())
+        .then(html => {
+          const parser = new DOMParser();
+          const htmlDoc = parser.parseFromString(html, "text/html");
+          const note = htmlDoc.querySelector('main.content');
+          if (note !== null) {
+            // This should only happen for chapter cross references
+            // (since there is no id in the URL)
+            // remove the first header
+            if (note.children.length > 0 && note.children[0].tagName === "HEADER") {
+              note.children[0].remove();
+            }
+            const html = processXRef(null, note);
+            instance.setContent(html);
+          } 
+        }).finally(() => {
+          instance.enable();
+          instance.show();
+        });
+      }
+    }, function(instance) {
+    });
+  }
+      let selectedAnnoteEl;
+      const selectorForAnnotation = ( cell, annotation) => {
+        let cellAttr = 'data-code-cell="' + cell + '"';
+        let lineAttr = 'data-code-annotation="' +  annotation + '"';
+        const selector = 'span[' + cellAttr + '][' + lineAttr + ']';
+        return selector;
+      }
+      const selectCodeLines = (annoteEl) => {
+        const doc = window.document;
+        const targetCell = annoteEl.getAttribute("data-target-cell");
+        const targetAnnotation = annoteEl.getAttribute("data-target-annotation");
+        const annoteSpan = window.document.querySelector(selectorForAnnotation(targetCell, targetAnnotation));
+        const lines = annoteSpan.getAttribute("data-code-lines").split(",");
+        const lineIds = lines.map((line) => {
+          return targetCell + "-" + line;
+        })
+        let top = null;
+        let height = null;
+        let parent = null;
+        if (lineIds.length > 0) {
+            //compute the position of the single el (top and bottom and make a div)
+            const el = window.document.getElementById(lineIds[0]);
+            top = el.offsetTop;
+            height = el.offsetHeight;
+            parent = el.parentElement.parentElement;
+          if (lineIds.length > 1) {
+            const lastEl = window.document.getElementById(lineIds[lineIds.length - 1]);
+            const bottom = lastEl.offsetTop + lastEl.offsetHeight;
+            height = bottom - top;
+          }
+          if (top !== null && height !== null && parent !== null) {
+            // cook up a div (if necessary) and position it 
+            let div = window.document.getElementById("code-annotation-line-highlight");
+            if (div === null) {
+              div = window.document.createElement("div");
+              div.setAttribute("id", "code-annotation-line-highlight");
+              div.style.position = 'absolute';
+              parent.appendChild(div);
+            }
+            div.style.top = top - 2 + "px";
+            div.style.height = height + 4 + "px";
+            div.style.left = 0;
+            let gutterDiv = window.document.getElementById("code-annotation-line-highlight-gutter");
+            if (gutterDiv === null) {
+              gutterDiv = window.document.createElement("div");
+              gutterDiv.setAttribute("id", "code-annotation-line-highlight-gutter");
+              gutterDiv.style.position = 'absolute';
+              const codeCell = window.document.getElementById(targetCell);
+              const gutter = codeCell.querySelector('.code-annotation-gutter');
+              gutter.appendChild(gutterDiv);
+            }
+            gutterDiv.style.top = top - 2 + "px";
+            gutterDiv.style.height = height + 4 + "px";
+          }
+          selectedAnnoteEl = annoteEl;
+        }
+      };
+      const unselectCodeLines = () => {
+        const elementsIds = ["code-annotation-line-highlight", "code-annotation-line-highlight-gutter"];
+        elementsIds.forEach((elId) => {
+          const div = window.document.getElementById(elId);
+          if (div) {
+            div.remove();
+          }
+        });
+        selectedAnnoteEl = undefined;
+      };
+        // Handle positioning of the toggle
+    window.addEventListener(
+      "resize",
+      throttle(() => {
+        elRect = undefined;
+        if (selectedAnnoteEl) {
+          selectCodeLines(selectedAnnoteEl);
+        }
+      }, 10)
+    );
+    function throttle(fn, ms) {
+    let throttle = false;
+    let timer;
+      return (...args) => {
+        if(!throttle) { // first call gets through
+            fn.apply(this, args);
+            throttle = true;
+        } else { // all the others get throttled
+            if(timer) clearTimeout(timer); // cancel #2
+            timer = setTimeout(() => {
+              fn.apply(this, args);
+              timer = throttle = false;
+            }, ms);
+        }
+      };
+    }
+      // Attach click handler to the DT
+      const annoteDls = window.document.querySelectorAll('dt[data-target-cell]');
+      for (const annoteDlNode of annoteDls) {
+        annoteDlNode.addEventListener('click', (event) => {
+          const clickedEl = event.target;
+          if (clickedEl !== selectedAnnoteEl) {
+            unselectCodeLines();
+            const activeEl = window.document.querySelector('dt[data-target-cell].code-annotation-active');
+            if (activeEl) {
+              activeEl.classList.remove('code-annotation-active');
+            }
+            selectCodeLines(clickedEl);
+            clickedEl.classList.add('code-annotation-active');
+          } else {
+            // Unselect the line
+            unselectCodeLines();
+            clickedEl.classList.remove('code-annotation-active');
+          }
+        });
+      }
+  const findCites = (el) => {
+    const parentEl = el.parentElement;
+    if (parentEl) {
+      const cites = parentEl.dataset.cites;
+      if (cites) {
+        return {
+          el,
+          cites: cites.split(' ')
+        };
+      } else {
+        return findCites(el.parentElement)
+      }
+    } else {
+      return undefined;
+    }
+  };
+  var bibliorefs = window.document.querySelectorAll('a[role="doc-biblioref"]');
+  for (var i=0; i<bibliorefs.length; i++) {
+    const ref = bibliorefs[i];
+    const citeInfo = findCites(ref);
+    if (citeInfo) {
+      tippyHover(citeInfo.el, function() {
+        var popup = window.document.createElement('div');
+        citeInfo.cites.forEach(function(cite) {
+          var citeDiv = window.document.createElement('div');
+          citeDiv.classList.add('hanging-indent');
+          citeDiv.classList.add('csl-entry');
+          var biblioDiv = window.document.getElementById('ref-' + cite);
+          if (biblioDiv) {
+            citeDiv.innerHTML = biblioDiv.innerHTML;
+          }
+          popup.appendChild(citeDiv);
+        });
+        return popup.innerHTML;
+      });
+    }
+  }
+});
+</script>
+</div> <!-- /content -->
+
+
+
+
+</body></html>
